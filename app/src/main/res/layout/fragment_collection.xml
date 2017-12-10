@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:background="#000000">
+
+    <RelativeLayout
+        android:id="@+id/fragment_collection_preview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/fragment_collection_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            tools:text="Collection name"/>
+
+        <ImageView
+            android:id="@+id/fragment_collection_preview_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_above="@id/fragment_collection_description"
+            android:layout_below="@id/fragment_collection_name"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/fragment_collection_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            tools:text="collection description"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fragment_collection_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/fragment_collection_close_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_close_white_48dp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fragment_collection_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
+            android:layout_above="@id/fragment_collection_visit_btn"
+            android:layout_below="@id/fragment_collection_close_btn"/>
+
+        <Button
+            android:id="@+id/fragment_collection_visit_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:padding="10dp"
+            android:background="#333333"
+            android:textColor="#FFFFFF"
+            android:text="Visit collection"/>
+
+    </RelativeLayout>
+
+</FrameLayout>
